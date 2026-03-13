@@ -1,0 +1,876 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: APIs Django REST Framework Final Project
+meta:
+  id: wrk_227f3bf064d141faa9198094339dd0db
+  created: 1773275608585
+  modified: 1773407274489
+  description: ""
+collection:
+  - name: Menu Management
+    meta:
+      id: fld_5a61f1c95b114caa803af1f9c442edee
+      created: 1773295657697
+      modified: 1773371119415
+      sortKey: -1773295657697
+      description: ""
+    children:
+      - url: 127.0.0.1:8000/api/menu-item
+        name: Get Menu List
+        meta:
+          id: req_bb3cf6357d1848199c8cae3ae0eea850
+          created: 1773275708588
+          modified: 1773371119460
+          isPrivate: false
+          description: ""
+          sortKey: -1773295660413
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 94205e05b63013cce1827f842150a60c5fb5f253
+          prefix: Token
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: 127.0.0.1:8000/api/menu-item
+        name: Add Menu Item
+        meta:
+          id: req_649803f9f35e4396a0e8f0edf96e12b2
+          created: 1773275858246
+          modified: 1773371119439
+          isPrivate: false
+          description: ""
+          sortKey: -1773295660313
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: title
+              value: Grilled Porkchop
+              description: ""
+              disabled: false
+            - name: price
+              value: "15"
+              description: ""
+              disabled: false
+            - name: inventory
+              value: "20"
+              description: ""
+              disabled: false
+            - name: category_id
+              value: "1"
+              description: ""
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          disabled: false
+          token: 94205e05b63013cce1827f842150a60c5fb5f253
+          prefix: Token
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: 127.0.0.1:8000/api/menu-item
+        name: Edit Menu Item
+        meta:
+          id: req_11aefc537a2b471ab9d98ebe9e5d3ae8
+          created: 1773282884639
+          modified: 1773371119425
+          isPrivate: false
+          description: ""
+          sortKey: -1773295660213
+        method: PUT
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: title
+              value: Grilled Chicken
+              description: ""
+              disabled: false
+            - name: price
+              value: "15"
+              description: ""
+              disabled: false
+            - name: inventory
+              value: "20"
+              description: ""
+              disabled: false
+            - name: category_id
+              value: "1"
+              description: ""
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          disabled: false
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzczMjgwODA0LCJpYXQiOjE3NzMyODA1MDQsImp0aSI6IjJkY2NjYmQyNjBkNzQ4ZDQ4MWYzZWQzMzQ3OWJkMDY4IiwidXNlcl9pZCI6IjEifQ.h262kMKnKf7aL1V3eFQbTnhYIjtjHbk9PcW5kZq8Rtg
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: 127.0.0.1:8000/api/menu-item/14
+        name: Delete Menu Item
+        meta:
+          id: req_1731167d0a174883ad68b67dc7801948
+          created: 1773282892410
+          modified: 1773371119426
+          isPrivate: false
+          description: ""
+          sortKey: -1773295660013
+        method: DELETE
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: ""
+              value: ""
+              description: ""
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          disabled: false
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzczMjgzNjg2LCJpYXQiOjE3NzMyODMzODYsImp0aSI6ImNiMzlhZTY1MTY1ZDRjMWE5Nzg3YjU4OGU4NGJkOTRkIiwidXNlcl9pZCI6IjMifQ.aZhcO9Bk2Qn-Sgl8fFZoTG86vr80_yHRyPqVv5JOinU
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: 127.0.0.1:8000/api/menu-item
+        name: Partial Edit Menu Item
+        meta:
+          id: req_9fffb5ddc3884f29bc9a48af722d8c79
+          created: 1773282912962
+          modified: 1773371119454
+          isPrivate: false
+          description: ""
+          sortKey: -1773295660113
+        method: PATCH
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: title
+              value: Grilled Chicken
+              description: ""
+              disabled: false
+            - name: price
+              value: "15"
+              description: ""
+              disabled: false
+            - name: inventory
+              value: "20"
+              description: ""
+              disabled: false
+            - name: category_id
+              value: "1"
+              description: ""
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          disabled: false
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzczMjgwODA0LCJpYXQiOjE3NzMyODA1MDQsImp0aSI6IjJkY2NjYmQyNjBkNzQ4ZDQ4MWYzZWQzMzQ3OWJkMDY4IiwidXNlcl9pZCI6IjEifQ.h262kMKnKf7aL1V3eFQbTnhYIjtjHbk9PcW5kZq8Rtg
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Manager Management
+    meta:
+      id: fld_77ed67b293134e3f8bb63a8e9a7ee2f9
+      created: 1773295689654
+      modified: 1773371119420
+      sortKey: -1773275703101.7188
+      description: ""
+    children:
+      - url: 127.0.0.1:8000/api/groups/manager/users
+        name: Get Managers List
+        meta:
+          id: req_7a019397b8c44cc3be34cca95963946d
+          created: 1773293494685
+          modified: 1773371119442
+          isPrivate: false
+          description: ""
+          sortKey: -1773295703360
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 03984b353ce7ef96a97df300ff2eb37e1f0af6f8
+          prefix: Token
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: 127.0.0.1:8000/api/groups/manager/users
+        name: Add Manager
+        meta:
+          id: req_0a0566c4890a4ae4a873e10276f31e95
+          created: 1773294511370
+          modified: 1773371119421
+          isPrivate: false
+          description: ""
+          sortKey: -1773295703260
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: username
+              value: manager-1
+              description: ""
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 03984b353ce7ef96a97df300ff2eb37e1f0af6f8
+          prefix: Token
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: 127.0.0.1:8000/api/groups/manager/users/5
+        name: Remove Manager
+        meta:
+          id: req_8e01f37dfe8948de930631a6e99615a5
+          created: 1773294958582
+          modified: 1773371119449
+          isPrivate: false
+          description: ""
+          sortKey: -1773295703160
+        method: DELETE
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: ""
+              value: ""
+              description: ""
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 03984b353ce7ef96a97df300ff2eb37e1f0af6f8
+          prefix: Token
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Delivery Crew Management
+    meta:
+      id: fld_0d4cc26455fb4ced82d47a5a557a7c31
+      created: 1773295821945
+      modified: 1773371119409
+      sortKey: -1773275703051.7188
+      description: ""
+    children:
+      - url: 127.0.0.1:8000/api/groups/delivery-crew/users
+        name: Get Delivery Crew List
+        meta:
+          id: req_f5e7d22548f74addb72157a7fefb6364
+          created: 1773295821947
+          modified: 1773371119470
+          isPrivate: false
+          description: ""
+          sortKey: -1773295703360
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 03984b353ce7ef96a97df300ff2eb37e1f0af6f8
+          prefix: Token
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: 127.0.0.1:8000/api/groups/delivery-crew/users
+        name: "Add Delivery Crew "
+        meta:
+          id: req_4c6c434166c548f9a21c54084dc5fbd8
+          created: 1773295821948
+          modified: 1773371119435
+          isPrivate: false
+          description: ""
+          sortKey: -1773295703260
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: username
+              value: staff-1
+              description: ""
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 03984b353ce7ef96a97df300ff2eb37e1f0af6f8
+          prefix: Token
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: 127.0.0.1:8000/api/groups/delivery-crew/users/4
+        name: "Remove Delivery Crew "
+        meta:
+          id: req_8601bf54314348efa87e40c458c183f0
+          created: 1773295821952
+          modified: 1773371119446
+          isPrivate: false
+          description: ""
+          sortKey: -1773295703160
+        method: DELETE
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: ""
+              value: ""
+              description: ""
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 03984b353ce7ef96a97df300ff2eb37e1f0af6f8
+          prefix: Token
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Tokens
+    meta:
+      id: fld_4eeb016be3564493a8a32b134cd6a780
+      created: 1773297710945
+      modified: 1773374426446
+      sortKey: -1773295657797
+      description: ""
+    children:
+      - url: 127.0.0.1:8000/api/token/
+        name: Get Manager JWT Token
+        meta:
+          id: req_e92c641cc954430b97fc239aa6074b40
+          created: 1773275608720
+          modified: 1773371119468
+          isPrivate: false
+          description: ""
+          sortKey: -1773297716560
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: username
+              value: manager
+              description: ""
+              disabled: false
+            - name: password
+              value: littlelemon1234
+              description: ""
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: 127.0.0.1:8000/api/token/
+        name: Get Admin JWT Token
+        meta:
+          id: req_201ee93d65064c3bb401405398a7ba78
+          created: 1773278639700
+          modified: 1773371119433
+          isPrivate: false
+          description: ""
+          sortKey: -1773297716660
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: username
+              value: admin
+              description: ""
+              disabled: false
+            - name: password
+              value: admin1234
+              description: ""
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: 127.0.0.1:8000/token/login
+        name: Get Manager Token
+        meta:
+          id: req_a2c0af85a3f74ff596c552367f7a2bcb
+          created: 1773283821590
+          modified: 1773371119456
+          isPrivate: false
+          description: ""
+          sortKey: -1773297716360
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: username
+              value: manager
+              description: ""
+              disabled: false
+            - name: password
+              value: littlelemon1234
+              description: ""
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: 127.0.0.1:8000/token/login
+        name: Get Admin Token
+        meta:
+          id: req_1922aa7da39443eda1c28414acbd3c6a
+          created: 1773293475407
+          modified: 1773371119429
+          isPrivate: false
+          description: ""
+          sortKey: -1773297716460
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: username
+              value: admin
+              description: ""
+              disabled: false
+            - name: password
+              value: admin1234
+              description: ""
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: 127.0.0.1:8000/token/login
+        name: Get Customer Token
+        meta:
+          id: req_d4f28053518c473bafde4df1afbc2e9d
+          created: 1773297754533
+          modified: 1773385380947
+          isPrivate: false
+          description: ""
+          sortKey: -1773296709860
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: username
+              value: customer
+              description: ""
+              disabled: false
+            - name: password
+              value: littlelemon1234
+              description: ""
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Cart Management
+    meta:
+      id: fld_aa9169cedb8545f1a7e105ce2cb990bd
+      created: 1773374387588
+      modified: 1773385468090
+      sortKey: -1773275697695.371
+      description: ""
+    children:
+      - url: 127.0.0.1:8000/api/cart/menu-items
+        name: Add New Menu Item to Cart
+        meta:
+          id: req_1daff59dc1d34d6a8196bd9bf1a21ee2
+          created: 1773374439411
+          modified: 1773407284750
+          isPrivate: false
+          description: ""
+          sortKey: -1773374439411
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: menuitem_id
+              value: "2"
+              description: ""
+              disabled: false
+            - name: quantity
+              value: "2"
+              description: ""
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: bfb5592c149a732393bd872769a084e0be23c6a4
+          prefix: Token
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: 127.0.0.1:8000/api/cart/menu-items
+        name: Get all Cart Items of User
+        meta:
+          id: req_76e5feabffa64125bbcc766b55a7319b
+          created: 1773382456321
+          modified: 1773385387371
+          isPrivate: false
+          description: ""
+          sortKey: -1773382456321
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 94205e05b63013cce1827f842150a60c5fb5f253
+          prefix: Token
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: 127.0.0.1:8000/api/cart/menu-items
+        name: Delete all Cart Items of User
+        meta:
+          id: req_1ba9245863c44f079d84d5c6cff8ed88
+          created: 1773382567335
+          modified: 1773385365177
+          isPrivate: false
+          description: ""
+          sortKey: -1773374439311
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: bfb5592c149a732393bd872769a084e0be23c6a4
+          prefix: Token
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: User Management
+    meta:
+      id: fld_10e8160bc15141af9cc97fb6d5712e90
+      created: 1773383141440
+      modified: 1773383141440
+      sortKey: -1773383141440
+      description: ""
+    children:
+      - url: 127.0.0.1:8000/api/users/
+        name: Create New User
+        meta:
+          id: req_dbe86603437e4679b49acb5bc03e5ecf
+          created: 1773383149400
+          modified: 1773385006909
+          isPrivate: false
+          description: ""
+          sortKey: -1773383149400
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: username
+              value: customer-2
+              description: ""
+              disabled: false
+            - name: password
+              value: littlelemon1234
+              description: ""
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: 127.0.0.1:8000/api/users/me
+        name: Get Current User
+        meta:
+          id: req_c50ad6b9426e49609a5d9a561c11ece9
+          created: 1773383299745
+          modified: 1773384760052
+          isPrivate: false
+          description: ""
+          sortKey: -1773382802860.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          disabled: false
+          token: bfb5592c149a732393bd872769a084e0be23c6a4
+          prefix: Token
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Order Management
+    meta:
+      id: fld_aaa3f25fcaae4b2b9aa9e0268fa2d73a
+      created: 1773385458906
+      modified: 1773385462019
+      sortKey: -1773275692339.0234
+      description: ""
+    children:
+      - url: 127.0.0.1:8000/api/orders
+        name: Get all Orders of this User
+        meta:
+          id: req_517a173433f449089a1fe956f1f6af91
+          created: 1773388639692
+          modified: 1773389392114
+          isPrivate: false
+          description: ""
+          sortKey: -1773385895892.5
+        method: POST
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 94205e05b63013cce1827f842150a60c5fb5f253
+          prefix: Token
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: 127.0.0.1:8000/api/orders
+        name: Get all Orders of this User
+        meta:
+          id: req_e74c90d5c6584413b3aee51859a52b96
+          created: 1773389381174
+          modified: 1773395160913
+          isPrivate: false
+          description: ""
+          sortKey: -1773385895992.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 94205e05b63013cce1827f842150a60c5fb5f253
+          prefix: Token
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_0e8cff42f93814df1db01c8be60bc7efbc135664
+    created: 1773371119537
+    modified: 1773371119537
+environments:
+  name: Base Environment
+  meta:
+    id: env_0e8cff42f93814df1db01c8be60bc7efbc135664
+    created: 1773275608592
+    modified: 1773371119402
+    isPrivate: false

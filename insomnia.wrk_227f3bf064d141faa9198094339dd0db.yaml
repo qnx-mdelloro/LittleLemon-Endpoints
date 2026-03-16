@@ -175,12 +175,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: 127.0.0.1:8000/api/menu-item
+      - url: 127.0.0.1:8000/api/menu-item/16
         name: Partial Edit Menu Item
         meta:
           id: req_9fffb5ddc3884f29bc9a48af722d8c79
           created: 1773282912962
-          modified: 1773371119454
+          modified: 1773644809002
           isPrivate: false
           description: ""
           sortKey: -1773295660113
@@ -189,7 +189,7 @@ collection:
           mimeType: multipart/form-data
           params:
             - name: title
-              value: Grilled Chicken
+              value: Grilled Chicken Skewers
               description: ""
               disabled: false
             - name: price
@@ -214,7 +214,8 @@ collection:
         authentication:
           type: bearer
           disabled: false
-          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzczMjgwODA0LCJpYXQiOjE3NzMyODA1MDQsImp0aSI6IjJkY2NjYmQyNjBkNzQ4ZDQ4MWYzZWQzMzQ3OWJkMDY4IiwidXNlcl9pZCI6IjEifQ.h262kMKnKf7aL1V3eFQbTnhYIjtjHbk9PcW5kZq8Rtg
+          token: 03984b353ce7ef96a97df300ff2eb37e1f0af6f8
+          prefix: Token
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -224,15 +225,84 @@ collection:
             store: true
           rebuildPath: true
       - url: 127.0.0.1:8000/api/menu-item
-        name: Search Menu List
+        name: Search Menu List by Title
         meta:
           id: req_eae7698ccba14f7c9430ed3d4b2b8cb7
           created: 1773468669102
-          modified: 1773640316282
+          modified: 1773642978217
           isPrivate: false
           description: ""
           sortKey: -1773295660363
         method: GET
+        parameters:
+          - name: title
+            value: Mac
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 94205e05b63013cce1827f842150a60c5fb5f253
+          prefix: Token
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: 127.0.0.1:8000/api/menu-item
+        name: Search Menu List by Category
+        meta:
+          id: req_ba8eebe29685463385b6350469bdcf6c
+          created: 1773642925566
+          modified: 1773642933097
+          isPrivate: false
+          description: ""
+          sortKey: -1773295660338
+        method: GET
+        parameters:
+          - name: category
+            value: Dessert
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 94205e05b63013cce1827f842150a60c5fb5f253
+          prefix: Token
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: 127.0.0.1:8000/api/menu-item
+        name: Get Menu List Ordered by Price
+        meta:
+          id: req_2991048ffeb74f70b4723d9ec9c1d94f
+          created: 1773646482645
+          modified: 1773646653396
+          isPrivate: false
+          description: ""
+          sortKey: -1773295660388
+        method: GET
+        parameters:
+          - name: ordering
+            value: price
+            description: ""
+            disabled: false
         headers:
           - name: User-Agent
             value: insomnia/12.4.0
@@ -472,78 +542,6 @@ collection:
       sortKey: -1773295657797
       description: ""
     children:
-      - url: 127.0.0.1:8000/api/token/
-        name: Get Manager JWT Token
-        meta:
-          id: req_e92c641cc954430b97fc239aa6074b40
-          created: 1773275608720
-          modified: 1773371119468
-          isPrivate: false
-          description: ""
-          sortKey: -1773297716560
-        method: POST
-        body:
-          mimeType: multipart/form-data
-          params:
-            - name: username
-              value: manager
-              description: ""
-              disabled: false
-            - name: password
-              value: littlelemon1234
-              description: ""
-              disabled: false
-        headers:
-          - name: Content-Type
-            value: multipart/form-data
-          - name: User-Agent
-            value: insomnia/12.4.0
-            description: ""
-            disabled: false
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
-      - url: 127.0.0.1:8000/api/token/
-        name: Get Admin JWT Token
-        meta:
-          id: req_201ee93d65064c3bb401405398a7ba78
-          created: 1773278639700
-          modified: 1773371119433
-          isPrivate: false
-          description: ""
-          sortKey: -1773297716660
-        method: POST
-        body:
-          mimeType: multipart/form-data
-          params:
-            - name: username
-              value: admin
-              description: ""
-              disabled: false
-            - name: password
-              value: admin1234
-              description: ""
-              disabled: false
-        headers:
-          - name: Content-Type
-            value: multipart/form-data
-          - name: User-Agent
-            value: insomnia/12.4.0
-            description: ""
-            disabled: false
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
       - url: 127.0.0.1:8000/token/login
         name: Get Manager Token
         meta:
@@ -809,7 +807,7 @@ collection:
         meta:
           id: req_1daff59dc1d34d6a8196bd9bf1a21ee2
           created: 1773374439411
-          modified: 1773407284750
+          modified: 1773646933550
           isPrivate: false
           description: ""
           sortKey: -1773374439411
@@ -818,11 +816,11 @@ collection:
           mimeType: multipart/form-data
           params:
             - name: menuitem_id
-              value: "2"
+              value: "3"
               description: ""
               disabled: false
             - name: quantity
-              value: "2"
+              value: "10"
               description: ""
               disabled: false
         headers:
@@ -849,7 +847,7 @@ collection:
         meta:
           id: req_76e5feabffa64125bbcc766b55a7319b
           created: 1773382456321
-          modified: 1773385387371
+          modified: 1773645064917
           isPrivate: false
           description: ""
           sortKey: -1773382456321
@@ -861,7 +859,7 @@ collection:
             disabled: false
         authentication:
           type: bearer
-          token: 94205e05b63013cce1827f842150a60c5fb5f253
+          token: bfb5592c149a732393bd872769a084e0be23c6a4
           prefix: Token
         settings:
           renderRequestBody: true
@@ -983,7 +981,7 @@ collection:
         meta:
           id: req_517a173433f449089a1fe956f1f6af91
           created: 1773388639692
-          modified: 1773408686525
+          modified: 1773645076658
           isPrivate: false
           description: ""
           sortKey: -1773385895892.5
@@ -995,7 +993,7 @@ collection:
             disabled: false
         authentication:
           type: bearer
-          token: 94205e05b63013cce1827f842150a60c5fb5f253
+          token: bfb5592c149a732393bd872769a084e0be23c6a4
           prefix: Token
         settings:
           renderRequestBody: true
@@ -1010,7 +1008,7 @@ collection:
         meta:
           id: req_e74c90d5c6584413b3aee51859a52b96
           created: 1773389381174
-          modified: 1773395160913
+          modified: 1773647399519
           isPrivate: false
           description: ""
           sortKey: -1773385895992.5
@@ -1022,7 +1020,7 @@ collection:
             disabled: false
         authentication:
           type: bearer
-          token: 94205e05b63013cce1827f842150a60c5fb5f253
+          token: bfb5592c149a732393bd872769a084e0be23c6a4
           prefix: Token
         settings:
           renderRequestBody: true
@@ -1064,7 +1062,7 @@ collection:
         meta:
           id: req_9cf209c17909435787f2f02fe3e757ee
           created: 1773421109580
-          modified: 1773421349901
+          modified: 1773647345161
           isPrivate: false
           description: ""
           sortKey: -1773385896092.5
@@ -1086,12 +1084,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: 127.0.0.1:8000/api/orders/2
+      - url: 127.0.0.1:8000/api/orders/3
         name: Get Items of this Order of this User
         meta:
           id: req_6b4f765e9b1342e88b2c9ae6131a03f5
           created: 1773421435953
-          modified: 1773422892806
+          modified: 1773647443425
           isPrivate: false
           description: ""
           sortKey: -1773385895942.5
@@ -1103,7 +1101,7 @@ collection:
             disabled: false
         authentication:
           type: bearer
-          token: 94205e05b63013cce1827f842150a60c5fb5f253
+          token: bfb5592c149a732393bd872769a084e0be23c6a4
           prefix: Token
         settings:
           renderRequestBody: true
@@ -1113,12 +1111,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: 127.0.0.1:8000/api/orders/2
+      - url: 127.0.0.1:8000/api/orders/3
         name: Update Order Details if Manager
         meta:
           id: req_017a10b83a11446ca0a5c1a7cb9603f6
           created: 1773425149803
-          modified: 1773425331604
+          modified: 1773645560535
           isPrivate: false
           description: ""
           sortKey: -1773385895792.5
@@ -1199,6 +1197,38 @@ collection:
           description: ""
           sortKey: -1773383835998.125
         method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 03984b353ce7ef96a97df300ff2eb37e1f0af6f8
+          prefix: Token
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: 127.0.0.1:8000/api/orders
+        name: Get all Orders Ordered
+        meta:
+          id: req_555b7ac91ed5433e9e8efaf7763ed1a4
+          created: 1773646775936
+          modified: 1773647237512
+          isPrivate: false
+          description: ""
+          sortKey: -1773385896142.5
+        method: GET
+        parameters:
+          - name: ordering
+            value: ""
+            description: ""
+            disabled: false
         headers:
           - name: User-Agent
             value: insomnia/12.4.0
